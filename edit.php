@@ -48,23 +48,23 @@ if (isset($_POST['update'])) {
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
-        <div class="form-group">
+        <div class="mb-3">
           <input name="nombre_completo" type="text" class="form-control" value="<?php echo $nombre_completo; ?>" placeholder="Actualiza nombre" 
           required autofocus>
         </div>
-        <div class="form-group">
+        <div class="mb-3">
           <input name="correo_principal" type="email" class="form-control" value="<?php echo $correo_principal; ?>" placeholder="Actualiza correo" 
           required autofocus pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
         </div>
-        <div class="form-group">
+        <div class="mb-3">
           <input name="telefono" type="tel" class="form-control" value="<?php echo $telefono; ?>" placeholder="Actualiza telefono" 
           required autofocus minlength="10" maxlength="10" pattern="[0-9]{10}">
         </div>
-        <div class="form-group">
+        <div class="mb-3">
           <input type="tel" name="otro_telefono" class="form-control" value="<?php echo $otro_telefono; ?>" placeholder="Otro telefono" 
           autofocus minlength="10" maxlength="10" pattern="[0-9]{10}">
         </div>
-        <div class="form-group">
+        <div class="mb-3">
           <input type="date" name="fecha_nacimiento" class="form-control" value="<?php echo $fecha_nacimiento; ?>" placeholder="¿Cuando nació?" 
           required autofocus>
         </div>

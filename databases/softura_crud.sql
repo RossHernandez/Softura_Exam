@@ -46,13 +46,7 @@ INSERT INTO `empleados` (`id`, `nombre_completo`, `correo_principal`, `telefono`
 (2, 'Pedro Rosas', 'pedr_r@gmail.com', '1234543456', '9087867564', '1995-12-12', '2021-01-13 17:02:44'),
 (8, 'Mara Rodriguez', 'mara@werw', '2345676534', '', '1993-12-12', '2021-01-13 19:12:45');
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `empleados`
---
 ALTER TABLE `empleados`
   ADD PRIMARY KEY (`id`);
 
