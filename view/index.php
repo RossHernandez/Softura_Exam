@@ -1,8 +1,23 @@
-<?php include("db.php")
+<?php include("../controllers/db.php")
 ?>
 
-<?php include("includes/header.php") 
+<?php include("header.php") 
 ?>
+<!--<script type="text/javascript">
+  function ConfirmDelete()
+  {
+    var respuesta = confirm("¿Seguro que desea eliminar al empleado?");
+    if (respuesta == true)
+    {
+      return  true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+</script>
+-->
 
 <div class="container p-2">
 
@@ -47,11 +62,15 @@
                 <td><?php echo $row['fecha_nacimiento']; ?></td>
                 <td><?php echo $row['ingreso_sistema']; ?></td>
                 <td>
-                  <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary btn-sm mb-1">
+                  <a href="../controllers/edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary btn-sm mb-1">
                     <i class="fas fa-edit"></i>
                   </a>
-                  <a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger btn-sm">
+                  <a href="../controllers/delete.php?id=<?php echo $row['id']?>" class="btn btn-danger btn-sm"
+                  onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
                     <i class="far fa-trash-alt"></i>
+                     <!--<button type='button' class='btn btn danger' onclick="return ConfirmDelete">Eliminar</button>-->
+                    
+
                   </a>
                 </td>
               </tr>
@@ -64,5 +83,5 @@
   </div>
 </div>
 
-<?php include("includes/footer.php") 
+<?php include("footer.php") 
 ?>

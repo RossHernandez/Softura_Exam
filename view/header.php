@@ -10,8 +10,7 @@
     <!-- FONT AWESOEM -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -19,29 +18,24 @@
       <div class="container mb-2">
         <a class="navbar-brand" href="index.php">Empleados Softura</a>
         <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#miModal">
-	Agregar
-</button>
+        	Agregar
+        </button>
       </div>
-
-
-
 <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
       <h4 class="modal-title" id="myModalLabel">Agregar Empleado</h4>
-        <button type="button" class="close " data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
         
       </div>
-
       <div class="modal-body">
       <div class="card card-body">
       <!--Inicia formulario-->
-      <form action="save.php" method="POST">
+      <form action="../controllers/save.php" method="POST">
         <div class="mb-3">
-          <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre" autofocus required>
+          <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre" autofocus required
+          minlength="5">
         </div>
         <div class="mb-3">
           <input type="email" name="correo_principal" class="form-control" placeholder="Correo principal" 

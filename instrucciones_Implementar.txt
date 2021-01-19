@@ -1,0 +1,15 @@
+Para hacer el sistema web requerido hice uso de herramientas y lenguajes como mysql, 
+visual estudio code, github Destktop, php, jquery, html, bootstrap, entre otros. 
+
+Si gusta puede relizar la instalacion en su equipo local, existe dentro de .rar un archivo
+de sql el cual debera ejecutar dentro de su entorno mysql ya sea workbench o simplemente 
+phpmyadmin.
+Colocar la carpeta ya extraida dentro de C:\xampp\htdocs ... y las carpetas y archivos que
+contiene.
+Si esta trabajando con phpmyadmin, debe colocar http://localhost/Softura_CRUD/view/index.php
+pues es el archivo padre, que podra visualizar para poder tener el sistema crud dentro 
+de su computador, lo puede ejecutar en cualquier buscador, lo bonito de trabajar con 
+bootstrap es que este sistema ya es responsivo. 
+
+
+Saludos 

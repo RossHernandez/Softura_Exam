@@ -38,14 +38,16 @@ if (isset($_POST['update'])) {
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Registro editado';
   $_SESSION['message_type'] = 'warning';
-  header('Location: index.php');
+  header('Location: ../view/index.php');
 }
-
+ 
 ?>
-<?php include('includes/header.php'); ?>
+<?php include('../view/header.php'); ?>
+
+
 <div class="container p-4">
   <div class="row">
-    <div class="col-md-4 mx-auto">
+    <div class="col-md-6 mx-auto">
       <div class="card card-body">
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="mb-3">
@@ -69,12 +71,13 @@ if (isset($_POST['update'])) {
           required autofocus>
         </div>
 
-        <button class="btn-success" name="update">
-          Actualizar
-</button>
+        <button class="btn-success btn btn-primary" name="update">
+          Actualizar</button>
+          <a href="../view/index.php" type="button" class="btn btn-secondary">Cancelar</a>
+          
       </form>
       </div>
     </div>
   </div>
 </div>
-<?php include('includes/footer.php'); ?>
+<?php include('../view/footer.php'); ?>

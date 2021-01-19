@@ -12,7 +12,7 @@ if(isset($_GET['id'])) {
   
   $_SESSION['message'] = 'Registro eliminado satisfactoriamente';
   $_SESSION['message_type'] = 'danger';
-  header('Location: index.php');
+  header('Location: ../view/index.php');
 }
 
 ?>
