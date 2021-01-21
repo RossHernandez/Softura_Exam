@@ -18,7 +18,6 @@
   }
 </script>
 -->
-
 <div class="container p-2">
 
   <div class="row">
@@ -62,6 +61,10 @@
                 <td><?php echo $row['fecha_nacimiento']; ?></td>
                 <td><?php echo $row['ingreso_sistema']; ?></td>
                 <td>
+                <button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#miModalEdit">
+                <i class="fas fa-edit"></i>
+                </button>
+
                   <a href="../controllers/edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary btn-sm mb-1">
                     <i class="fas fa-edit"></i>
                   </a>
@@ -69,8 +72,6 @@
                   onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
                     <i class="far fa-trash-alt"></i>
                      <!--<button type='button' class='btn btn danger' onclick="return ConfirmDelete">Eliminar</button>-->
-                    
-
                   </a>
                 </td>
               </tr>

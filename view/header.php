@@ -16,7 +16,7 @@
   <body>
   <nav class="navbar navbar-dark bg-dark">
       <div class="container mb-2">
-        <a class="navbar-brand" href="index.php">Empleados Softura</a>
+        <a class="navbar-brand" href="../view/index.php">Empleados</a>
         <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#miModal">
         	Agregar
         </button>
@@ -66,6 +66,24 @@
     </div>
   </div>
 </div>
-      
-  </nav>
-  </body>
+
+
+<div class="modal fade" id="miModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Editar Empleado</h4>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card card-body">
+            <h4>Hola Editar</h4>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+    
+</nav>
+</body>

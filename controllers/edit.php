@@ -44,11 +44,11 @@ if (isset($_POST['update'])) {
 ?>
 <?php include('../view/header.php'); ?>
 
-
 <div class="container p-4">
   <div class="row">
     <div class="col-md-6 mx-auto">
       <div class="card card-body">
+      <!--Inicia Form-->
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="mb-3">
           <input name="nombre_completo" type="text" class="form-control" value="<?php echo $nombre_completo; ?>" placeholder="Actualiza nombre" 
@@ -56,7 +56,7 @@ if (isset($_POST['update'])) {
         </div>
         <div class="mb-3">
           <input name="correo_principal" type="email" class="form-control" value="<?php echo $correo_principal; ?>" placeholder="Actualiza correo" 
-          required autofocus pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+          required autofocus pattern="^((?!\.)[\w-_.]*[^.](@\w+)(\.\w+(\.\w+)?[^.\W]))$">
         </div>
         <div class="mb-3">
           <input name="telefono" type="tel" class="form-control" value="<?php echo $telefono; ?>" placeholder="Actualiza telefono" 
@@ -76,8 +76,17 @@ if (isset($_POST['update'])) {
           <a href="../view/index.php" type="button" class="btn btn-secondary">Cancelar</a>
           
       </form>
+      <!--Termina Form-->
       </div>
     </div>
   </div>
 </div>
 <?php include('../view/footer.php'); ?>
+
+<!--
+Exp Regulares
+
+^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$
+^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$
+^((?!\.)[\w-_.]*[^.](@\w+)(\.\w+(\.\w+)?[^.\W]))$
+-->
